@@ -17,7 +17,7 @@
 # along with GNU Radio; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
-
 install(FILES
-    test38_msgStrobe_mm.block.yml DESTINATION share/gnuradio/grc/blocks
+    test38_msgStrobe_mm.block.yml
+    test38_sync_test.block.yml DESTINATION share/gnuradio/grc/blocks
 )

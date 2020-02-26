@@ -23,5 +23,6 @@
 ########################################################################
 install(FILES
     api.h
-    msgStrobe_mm.h DESTINATION include/test38
+    msgStrobe_mm.h
+    sync_test.h DESTINATION include/test38
 )

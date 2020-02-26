@@ -22,6 +22,7 @@
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import pmt
+import time
 import test38_swig as test38
 
 class qa_msgStrobe_mm(gr_unittest.TestCase):
@@ -35,7 +36,7 @@ class qa_msgStrobe_mm(gr_unittest.TestCase):
     def test_001_t(self):
         text = "TESTING"
         msg = pmt.intern("TESTING")
-        src = test38.msgPulse_mm(msg)
+        src = test38.msgStrobe_mm(msg)
         snk = blocks.message_debug()
 
         self.tb.msg_connect(src, "strobe", snk, "store")
@@ -49,6 +50,4 @@ class qa_msgStrobe_mm(gr_unittest.TestCase):
 
 
 if __name__ == '__main__':
-    print 'Blocked waiting for GDB attach (pid = %d)' % (os.getpid(),)
-    raw_input('Press Enter to continue: ')
     gr_unittest.run(qa_msgStrobe_mm)

@@ -22,10 +22,9 @@
 # Setup library
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
-
 list(APPEND test38_sources
     msgStrobe_mm_impl.cc
-)
+    sync_test_impl.cc )
 
 set(test38_sources "${test38_sources}" PARENT_SCOPE)
 if(NOT test38_sources)
